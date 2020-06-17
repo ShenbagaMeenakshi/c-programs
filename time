@@ -1,0 +1,29 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+class time
+{
+	private:
+		int hours,mins,secs;
+  public:
+    total_secs();
+};
+time::total_secs()
+{
+	int total;
+	cout<<"Hours?";
+	cin>>hours;
+	cout<<"Minutes?";
+	cin>>mins;
+	cout<<"Seconds?";
+	cin>>secs;
+	cout<<"\nthe time is="<<setw(2)<<setfill('0')<<hours<<":"<<setw(2)<<setfill('0')<<mins<<":"<<setw(2)<<setfill('0')<<secs;
+	total=((hours*3600)+(mins*60)+(secs));
+	cout<<"\nTime in total seconds:"<<total;
+}
+main()
+{
+	time t1;
+	cout<<"Enter time:"<<endl;
+	t1.total_secs();
+}
