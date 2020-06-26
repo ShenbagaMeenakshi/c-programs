@@ -58,7 +58,7 @@ void a::allotment()
 		}
 		else
 		{
-			if(strcmp(bus[n].seat[seat/4][(seat%4)-1],"empty")==0)
+			if(strcmp(bus[n].seat[seat/4][(seat%4)-1],"Empty")==0)
 			{
 				cout<<"\nEnter passenger's name:";
 				cin>>bus[n].seat[seat/4][(seat%4)-1];
@@ -110,7 +110,7 @@ void a::show()
 		    	{
 				 a++;
 		    	 if(strcmp(bus[n].seat[i][j],"Empty")!=0)
-		    	 cout<<"\n the seat no."<<(a-1)<<"is reserved for"<<bus[n].seat[i][j]<<".";
+		    	 cout<<"\n the seat no."<<(a-1)<<" is reserved for "<<bus[n].seat[i][j]<<".";
 				}
 			}
 			break;
@@ -119,7 +119,7 @@ void a::show()
 	cout<<"\nEnter correct bus no.:";
 }
 
-void a::position(int i)
+void a::position(int l)
 {
 	int s=0;p=0;
 	for(int i=0;i<8;i++)
@@ -128,14 +128,14 @@ void a::position(int i)
 		for(int j=0;j<4;j++)
 		{
 			s++;
-			if(strcmp(bus[1].seat[i][j],"Empty")==0)
+			if(strcmp(bus[l].seat[i][j],"Empty")==0)
 			{
 				cout.width(5);
 				cout.fill(' ');
 				cout<<s<<".";
 				cout.width(10);
 				cout.fill(' ');
-				cout<<bus[1].seat[i][j];
+				cout<<bus[l].seat[i][j];
 				p++;
 			
 			}
@@ -146,11 +146,11 @@ void a::position(int i)
 				cout<<s<<".";
 				cout.width(10);
 				cout.fill(' ');
-				cout<<bus[1].seat[i][j];
+				cout<<bus[l].seat[i][j];
 			}
 		}
 	}
-	cout<<"\n\nThere are"<<p<<"seats empty in bus no.:"<<bus[1].busno;
+	cout<<"\n\nThere are "<<p<<" seats empty in bus no.:"<<bus[l].busno;
 }
 
 void a::avail()
